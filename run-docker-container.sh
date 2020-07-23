@@ -12,7 +12,7 @@ docker run \
 	graves501/legacyclonk \
 	/console \
 	/signup \
-	/lobby Races.c4f/Wipfrace.c4s \
+	/lobby:60 Races.c4f/Wipfrace.c4s \
 
 	#TODO look what's up with the config file
 	# /config:config \

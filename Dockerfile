@@ -16,6 +16,7 @@ RUN \
   gzip \
   software-properties-common \
   unzip \
+  vim \
   wget \
   zip
 
