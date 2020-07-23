@@ -1,4 +1,23 @@
-FROM ubuntu:rolling
+FROM ubuntu:latest
+
+# Prevent tzdata configuration stop during build
+# Source: https://dev.to/setevoy/docker-configure-tzdata-and-timezone-during-build-20bk
+ENV TZ=Europe/Vienna
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+RUN \
+  apt-get update -y && \
+  apt-get upgrade -y && \
+  apt-get install -y \
+  apt-utils \
+  build-essential \
+  curl \
+  git \
+  gzip \
+  software-properties-common \
+  unzip \
+  wget \
+  zip
 
 ARG version
 
